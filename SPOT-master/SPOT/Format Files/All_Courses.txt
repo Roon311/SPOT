@@ -1,0 +1,228 @@
+BIOL 101,Biology I,3,Coreq: BIOL 111,
+BIOL 111,Biology I Lab,1,Coreq: BIOL 101,
+CHEM 101,Chemistry I,3,Coreq: CHEM 111,
+CHEM 102,Chemistry II,3,Coreq: CHEM 112,Prereq: CHEM 101
+CHEM 111,Chemistry I Lab,1,Coreq: CHEM 101,
+CHEM 112,Chemistry II Lab,1,Coreq: CHEM 102,
+CHEM 201,Organic Chemistry,3,Coreq: CHEM 211,Prereq: CHEM 102
+CHEM 211,Organic Chemistry Lab,1,Coreq: CHEM 201,
+CIE 202,Fundamentals of Computer Programming,3,,Prereq: CSCI 101
+CIE 205,Data Structures and Algorithm Analysis,3,,Prereq: CIE 202
+CIE 206,Database Management System,3,,Prereq: CIE 202
+CIE 212,Introduction to Electronics,3,,Prereq: ENGR 210
+CIE 227,Signals and Systems,3,,Prereq: MATH 201
+CIE 239,Digital Design and Computer Architecture,3,,
+CIE 301,Advanced Electric Circuits,3,,Prereq: ENGR 210 And MATH 202
+CIE 302,Operating Systems,3,,Prereq: CIE 205
+CIE 318,Control Systems,3,,Prereq: CIE 227
+CIE 320,Analog Electronics,3,,Prereq: CIE 212
+CIE 327,Probability and Stochastic Processes,3,,Prereq: CIE 227
+CIE 328,Electromagnetic Fields and Waves I,3,,Prereq: PEU 228 And PHYS 201
+CIE 337,Communications Theory and Systems,3,,Prereq: CIE 327
+CIE 338,Electromagnetic Fields and Waves II,3,,Prereq: CIE 328 And MATH 302
+CIE 402,Antennas Engineering,3,,Prereq: CIE 338
+CIE 405,Electric Machines,3,,Prereq: CIE 301
+CIE 408,Embedded Systems,3,,Prereq: CIE 239 And CIE 302
+CIE 416,Satellite Communications System,3,,Prereq: CIE 437 And CIE 338
+CIE 417,Machine Learning,3,,Prereq: CIE 205 And CIE 327
+CIE 418,Communications Circuits,3,,Prereq: CIE 320 And CIE 301
+CIE 425,Information Theory and Coding,3,,Prereq: CIE 327
+CIE 427,Big Data Analytics,3,,Prereq: CIE 206; CIE 417
+CIE 430,Sensors and Instrumentation,3,,Prereq: CIE 212
+CIE 437,Digital and Wireless Communications,3,,Prereq: CIE 337
+CIE 438,RF and Microwave Engineering,3,,Prereq: CIE 338
+CIE 440,Digital Control Systems,3,,Prereq: CIE 318
+CIE 442,Digital Signal Processing,3,,Prereq: CIE 227
+CIE 447,Computer Networks,3,,Prereq: CIE 437
+CIE 450,Robotics: Transformations  Kinematics  and Dynamics,3,,Prereq: CIE 318
+CIE 458,Artificial Intelligence,3,,Prereq: CIE 205 And MATH 201
+CIE 460,Software Engineering Fundamentals,3,Coreq: CIE 205 And CIE 206,
+CIE 464,Computer Graphics,3,,Prereq: CIE 205
+CIE 470,Intro to Quantum Comp & Quantum Info,3,Coreq: MATH 201,
+CIE 478,Advanced Wireless Communication Systems,3,,Prereq: CIE 437
+CIE 502,Propagation and Channel Modeling,3,,Prereq: CIE 402
+CIE 506,Bioinformatics for Engineers,3,,Prereq: BIOL 102 And CIE 417 And CIE 327
+CIE 510,Wireless Sensor Networks and IoT,3,,Prereq: CIE 478
+CIE 514,Visualization,3,,Prereq: CIE 464
+CIE 524,Mobile Communications Technologies,3,,Prereq: CIE 478
+CIE 528,Mechatronics Engineering,3,,Prereq: CIE 450
+CIE 530,Cognitive Radio Systems,3,,Prereq: CIE 428
+CIE 538,Electromagnetic Remote Sensing: Engineering Principles and Techniques,3,,Prereq: CIE 442 And CIE 338
+CIE 539,Advanced Computer Architecture,3,,Prereq: CIE 239
+CIE 552,Computer Vision,3,,Prereq: CIE 417
+CIE 553,Natural Language Processing,3,,Prereq: CIE 417
+CIE 554,Computer Arithmetic,3,,Prereq: CIE 205
+CIE 555,Neural Networks and Deep Learning,3,,Prereq: CIE 417
+CIE 556,Speech Analysis  synthesis  and recognition,3,,Prereq: CIE 417 And CIE 442
+CIE 558,Robot and Machine Vision,3,,Prereq: CIE 552 And CIE 442
+CIE 564,Parallel and Distributed Computing,3,,Prereq: CIE 239 And CIE 205
+CIE 574,Distributed Systems,3,,Prereq: CIE 447 And CIE 564
+CIE 581,Information Security and Encryption,3,,Prereq: MATH 308 And CIE 327
+CIE 591,Selected Topics in Networks and Communications Systems,1-3,,
+CIE 592,Selected Topics in Electromagnetics and Remote Sensing,1-3,,
+CIE 593,Selected Topics in Artificial Intelligence and Big Data Analytics,1-3,,
+CIE 594,Selected Topics in High Performance Computing and Visualization,1-3,,
+CIE 595,Selected topics in Robotics,1-3,,
+CIE 597,Selected topics in Communications and Information Engineering,1-3,,
+CIE 598,Senior Design Project I,1,,
+CIE 599,Senior Design Project II,3,,Prereq: CIE 598
+CSCI 101,Introduction to Computer Science,2,,
+EBE 522,Fuel Cells and Battery Technology,3,,Prereq: ENV 207 And CHEM 202
+ENG 151,Scientific Writing,2,,
+ENG 152,Effective Speaking and Composition,2,,
+ENGR 102,Introduction to Engineering Design,2,,
+ENGR 201,Circuits & Electronics,3,,Prereq: PHYS 102 And MATH 102
+ENGR 205,Thermodynamics for Engineers,3,,Prereq: CHEM 101 And PHYS 101
+ENGR 207,Fluid Mechanics,3,,Prereq: MATH 201 And PHYS 101
+ENGR 210,Electric Circuits,3,,Prereq: PHYS 102
+ENGR 218,Thermofluids,2,Coreq: MATH 202,Prereq: MATH 201 And PHYS 201
+ENGR 219,Introduction to Structural Mechanics,2,Coreq: MATH 201,Prereq: PHYS 101
+ENGR 221,Engineering Drawing,2,,
+ENGR 346,Heat Transfer,3,,Prereq: ENGR 205 And MATH 202
+ENGR 444,Industrial Training,2,,
+ENV 207,Material & Energy  Balances,3,,Prereq: ENGR 205
+ENV 220,Environmental Microbiology,3,Coreq: ENV 221,Prereq: BIOL 101
+ENV 221,Environmental Microbiology Lab,1,Coreq: ENV 220,
+ENV 301,Environmental Laws  Policies  and Economics,3,,
+ENV 303,Environmental Chemistry,3,,Prereq: CHEM 201
+ENV 319,Environmental Climatology,3,,Prereq: CHEM 102 And PHYS 101
+ENV 324,Ecology,3,,Prereq: BIOL 101 And CHEM 102
+ENV 330,Phase Equilibria for Engineers,3,,Prereq: ENGR 205
+ENV 348,Aquatic Environments,3,,Prereq: CHEM 102 And BIOL 101
+ENV 350,Hydraulic Engineering,3,,Prereq: ENGR 207
+ENV 357,Reactions Engineering,3,,Prereq: ENV 207
+ENV 359,Bioprocess Engineering,3,,Prereq: ENV 220 And ENV 207
+ENV 406,Surface & Groundwater Water Hydrology,3,,Prereq: ENGR 207
+ENV 415,Water and Wastewater Treatment Lab,1,Coreq: ENV 422,Prereq: ENV 303
+ENV 420,Water Treatment Engineering,3,,Prereq: ENV 303 And ENV 350
+ENV 422,Wastewater Treatment Engineering,3,,Prereq: ENV 359 And ENV 303
+ENV 423,Municipal Solid Waste Management,3,,Prereq: ENV 207
+ENV 425,Mass Transfer Operations,3,,Prereq: ENV 346 And ENV 330
+ENV 427,Hazardous Waste Management,2,,Prereq: ENV 207
+ENV 434,Safety & Risk Analysis,3,,Prereq: MATH 301 And ENV 425
+ENV 457,Environmental Impact Assessment,3,,Prereq: ENV 301
+ENV 470,Air Quality & Pollution Engineering,3,,Prereq: ENV 319 And ENV 207
+ENV 480,Urban Water Systems Design,3,,Prereq: ENV 406 And ENV 420
+ENV 508,Urban Water System Design,2,Coreq: ENV 508L,Prereq: ENV 422 And ENV 509
+ENV 510,Process Analysis and Simulation,3,,Prereq: ENV 425
+ENV 512,Green Economy,2,,
+ENV 514,Soil & Environmental Physics,3,,Prereq: ENV 406
+ENV 518,Introd to Environmental Systems Analysis,3,,Prereq: ENV 508 And ENV 207 And MATH 202
+ENV 519,Introduction to Integrated Water Resources Management,3,,Prereq: ENV 432
+ENV 520,Separation Processes,3,,Prereq: ENV 425
+ENV 522,Industrial Bio-Processes,3,,Prereq: ENV 359
+ENV 523,Transport & Fate of Chemicals in the Env,3,,Prereq: ENV 406 And ENV 470
+ENV 524,Life Cycle Assessment,3,,
+ENV 527,Appropriate Technology,1,,
+ENV 528,Pollution Sampling  Analysis& Monitoring,3,,Prereq: ENV 203
+ENV 530,Urban Development & Environmental Planning,3,,
+ENV 538,Soil & Groundwater Contam Survey & Remed,3,,Prereq: ENV 406
+ENV 555,Coastal Environmental Management,3,,Prereq: ENV 319 And ENV 350
+ENV 556,Soil & Water Chemistry,3,,Prereq: ENV 220 And CHEM 201
+ENV 558,Energy from Biomass and Waste,3,,Prereq: ENV 359
+ENV 559,Remote Sensing for the Environment,3,,Prereq: PHYS 102 And MATH 202
+ENV 597,Selected topics in Environmental Eng.,3,,
+ENV 598,Senior Design Project I,1,,
+ENV 599,Senior Design Project II,3,,Prereq: ENV 598
+HIS 302,Egyptian History,2,,
+HIS 304,Arab World History,2,,
+MATH 101,Calculus I,3,,
+MATH 102,Calculus II,3,,Prereq: MATH 101
+MATH 201,Linear Algebra and Vector Geometry,3,,Prereq: MATH 102
+MATH 202,Ordinary Differential Equations,3,,Prereq: MATH 102
+MATH 203,Introduction to Discrete Mathematics,1,,Prereq: CSCI 101
+MATH 301,Probability and Statistics,3,,Prereq: MATH 102
+MATH 302,Partial Differential Equations and Complex Analysis,3,,Prereq: MATH 202
+MATH 306,Numerical Analysis,3,,Prereq: MATH 201 And MATH 202
+MATH 308,Discrete Mathematics,3,,Prereq: CSCI 101
+MATSCI 201,Fundamentals of Materials Science and Engineering,3,,Prereq: CHEM 101 And PHYS 102
+MATSCI 255,Introduction to Nanomaterials Synthesis,2,,Prereq: CHEM 102
+NANENG 203,Electric Circuits,3,,Prereq: PHYS 102 And MATH 102
+NANENG 204,Digital Logic Design,2,,
+NANENG 301,Micro/Nano Fabrication Techniques,3,,Prereq: CHEM 102 And MATSCI 201
+NANENG 305,Physics Of Semiconductors,3,,Prereq: PHYS 202 And MATH 202
+NANENG 307,Physics of Electronic Materials,3,,Prereq: NANENG 305
+NANENG 308,Solid State Devices,3,,Prereq: NANENG 305
+NANENG 312,C/C++ Programming Lab,1,,Prereq: CSCI 101 And MATH 306
+NANENG 322,Electronic Circuit Design,3,,Prereq: ENGR 201
+NANENG 331,Electromagnetics,3,,Prereq: PHYS 201 And MATH 202
+NANENG 335,Introduction to Photonics,3,,Prereq: PHYS 201
+NANENG 401,MEMS Design and Fabrication,3,,Prereq: NANENG 301
+NANENG 402,Modern Characterization Techniques,2,,Prereq: CHEM 102 And PHYS 202 And MATSCI 201
+NANENG 410,Real-Time Embedded System & Microcontroller Design,3,,Prereq: NANENG 204 And NANENG 312
+NANENG 421,Analog Integrated Circuit Design,3,,Prereq: NANENG 322
+NANENG 422,ASIC and FPGA Design,3,,Prereq: NANENG 204
+NANENG 424,Photovoltaics and Photonic Devices,3,,Prereq: NANENG 305
+NANENG 430,Principles of Microwave and Waveguides,3,,Prereq: NANENG 331
+NANENG 433,Computer Architecture &Assembly Language,3,,Prereq: NANENG 204 And NANENG 312
+NANENG 461,Communications Theory and Systems,3,,Prereq: MATH 301
+NANENG 501,Advanced Digital ASIC Design,3,,Prereq: NANENG 422
+NANENG 511,Nano Photonics,3,,Prereq: NANENG 509
+NANENG 512,Applied Digital Control and Drives,3,,Prereq: NANENG 312 And MATH 202
+NANENG 513,Adv. Nanodevices Fabrication Techniques,3,,Prereq: NANENG 301
+NANENG 515,Adv. MEMS Design &Fabrication Techniques,3,,Prereq: NANENG 401
+NANENG 520,Advanced Devices,3,,Prereq: NANENG 308
+NANENG 522,Advanced RF/Mixed Signal ICs,3,,Prereq: NANENG 421
+NANENG 530,Computational Photonics,3,,Prereq: MATH 306 And NANENG 312
+NANENG 598,Senior Design Project I,1,,
+NANENG 599,Senior Design Project II,3,,Prereq: NANENG 598
+PEU 228,Vector Calculus,2,,Prereq: MATH 102
+PHIL 301,History & Philosophy of Science,2,,
+PHYS 101,Introduction to Classical Mechanics,3,Coreq: PHYS 111,
+PHYS 102,Introduction to Electromagnetism,3,Coreq: PHYS 112,Prereq: PHYS 101 And MATH 101
+PHYS 111,Introduction to Classical Mechanics Lab,1,Coreq: PHYS 101,
+PHYS 112,Introduction to Electromagnetism Lab,1,Coreq: PHYS 102,
+PHYS 201,Thermodynamics  Wave Motion and Optics,3,Coreq: PHYS 211,Prereq: MATH 102 And PHYS 102
+PHYS 202,Modern Physics,3,Coreq: PHYS 212,Prereq: MATH 201 And PHYS 201
+PHYS 211,Thermo  Wave Motion and Optics Lab,1,Coreq: PHYS 201,
+PHYS 212,Modern Physics Lab,1,Coreq: PHYS 202,
+REE 201,Renewable Energy Systems,2,,
+REE 202,Mechanics of Materials,3,,Prereq: MATH 102 And PHYS 101
+REE 208,Engineering Dynamics,3,,Prereq: MATH 102 And PHYS 101
+REE 222,Introduction to Manufacturing Processes,3,,
+REE 302,Machine Design,3,,Prereq: REE 202 And MATSCI 201 And REE 222
+REE 307,Fluid Mechanics II,3,,Prereq: ENGR 207
+REE 308,Mechanical  Vibrations,3,,Prereq: REE 208
+REE 309,Renewable Energy Systems,3,,
+REE 310,Control Systems,3,,Prereq: MATH 202
+REE 311,Electric Machines,3,,Prereq: ENGR 201 And MATH 202
+REE 312,Machine Design II,3,,Prereq: REE 302
+REE 322,Advanced Circuits Design,3,,Prereq: ENGR 201 And MATH 202
+REE 406,Advanced Thermodynamics,3,,Prereq: ENGR 205
+REE 407,Aerodynamics,3,,Prereq: ENGR 307
+REE 409,Advanced Control Systems,3,,Prereq: REE 310
+REE 411,Power Electronics,3,,Prereq: REE 322
+REE 415,Power Plant Technology,3,,Prereq: REE 406
+REE 419,Power Systems,3,,Prereq: REE 411
+REE 421,System Engineering,2,,
+REE 422,Optics and Photonics,3,,Prereq: PHYS 102 And MATH 202
+REE 428,Energy Storage,3,,Prereq: REE 309
+REE 430,Rotor Aerodynamics,3,,Prereq: REE 407
+REE 470,Computer-Aided Design and Engineering,3,,Prereq: REE 312
+REE 501,Sustainable Energy Development,2,,
+REE 503,Renewable Energy Law and Economics,2,,
+REE 506,Carbon Dioxide Sequestration,2,,Prereq: PEU 311
+REE 515,Thermal Solar Energy,3,,Prereq: REE 415
+REE 521,Smart Grid,3,,Prereq: REE 419
+REE 532,Photovoltaic Systems,3,,Prereq: REE 422
+REE 598,Senior Design Project I,1,,
+REE 599,Senior Design Project II,3,,Prereq: REE 598
+REE XXX,Elective,2,,
+SCH 201,World Literature,2,,
+SCH 202,Music Aesthetics,2,,
+SCH 205,Arabic Creative Writing,2,,
+SCH 206,Introduction to Visual Arts,2,,
+SCH 207,Analytical Philosophy,2,,
+SCH 232,Introduction to Psychology,2,,
+SCH 233,Engineering Economical Analysis,3,,
+SCH 234,History and Philosophy of Science,3,,
+SCH 235,The Creative Mind,3,,
+SCH 244,Leadership & Professionalism,2,,
+SCH 258,Arabic Literature,2,,
+SCH 260,Philosophical Thinking,2,,
+SCH 261,Engineering Project Management,2,,
+SCH 262,Engineering Project Economics,2,,
+SCH 263,Engineering Ethics and Safety,2,,
+SCH 264,Introduction to Entrepreneurship and Small Business Management,2,,
+SCH 265,Geography of Egypt,2,,
+SCH 266,Sociology,2,,

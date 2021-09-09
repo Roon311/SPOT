@@ -1,0 +1,148 @@
+#include "ActionDeclareMinor.h"
+#include "..\Registrar.h"
+#include <iostream>
+#include"../GUI/GUI.h"
+#include"../Utils/Utils.h"
+#include<sstream>  
+#include <algorithm>
+
+ActionDeclareMinor::ActionDeclareMinor(Registrar* P) :Action(P)
+{
+}
+bool ActionDeclareMinor::Execute()
+{
+	cout << "Bgrb a call" << endl;
+	GUI* pGUI = pReg->getGUI();
+	char c;//define a character c 
+	keytype key = NO_KEYPRESS;
+	key = pGUI->pWind->GetKeyPress(c);
+	pGUI->PrintMsg("Input 5 Minor Courses ");
+	int count=-1;//count to check the user enters 5 courses
+	int counter = 0;//to check if the course is present in the plan 
+	int TNOMCTBA = 0;//total number of minor credits to be added
+	string MinorCourses[5] = {};
+	while (count != 5 || key!=4)
+	{
+		pGUI->PrintMsg("Input 5 Minor Courses ");
+		key = pGUI->pWind->GetKeyPress(c);
+		string msg = pGUI->GetSrting();
+		for_each(msg.begin(), msg.end(), [](char& c)
+		{
+			c = ::toupper(c);
+		});
+
+		//Input validations
+		if (msg == " ")//to exit when the user presses escape
+			return true;
+		pReg->transformCode(msg);
+
+		//Check if exists
+		bool exists;
+		CourseInfo* pCInfo = pReg->inCatalog(msg, exists);
+		while (exists == 0) 
+		{
+			pGUI->PrintMsg("ERROR: " + msg + " is an invalid course code! Enter a valid one:");
+			msg = pGUI->GetSrting();
+			if (msg == " ")//to exit when the user presses escape
+				return true;
+			pReg->transformCode(msg);
+			pCInfo = pReg->inCatalog(msg, exists);
+		}
+		//if the course exists we loop through all thecourses in the studyplan
+		StudyPlan* plan = pReg->getStudyPlay();
+		vector<AcademicYear*>* pPlan = plan->getStudyPlanVector(); // pointer on the plan vector
+		for (AcademicYear* yr : *pPlan)
+		{
+			if (counter > 1)
+			{
+				pGUI->PrintMsg("You can't have more than 1 common course in the minor");
+				break;
+
+			}
+			list<Course*>* pYr = yr->getListOfYears(); // pointer to the year
+			for (int i = 0; i < SEM_CNT; i++)
+			{
+				for (auto it = pYr[i].begin(); it != pYr[i].end(); it++)
+				{
+					// Iterate on courses
+					Course* pCr = (*it);
+					if (msg == pCr->getCode())
+					{
+						counter = counter + 1;
+						pReg->UpdateInterface();
+					}
+				}
+			}
+		}
+		pReg->UpdateInterface();
+		//youssef's part from add course
+		ActionData actData = pGUI->GetUserAction("Select where you want to add your course");
+		int x, y;
+		if (actData.actType == DRAW_AREA)	//user clicked inside drawing area
+		{
+			int year = NULL;
+			SEMESTER semester = FALL;
+
+			//get coord where user clicked
+			x = actData.x;
+			y = actData.y;
+
+			graphicsInfo gInfo{ x, y };
+			if (x > GUI::VerticalSeparatorX && x < GUI::Year_X2) {
+				// The click X is inside the boundaries
+
+				//Get the Year
+				for (int i = 1; i <= GUI::NumOfYrs; i++) {
+					int yi = (GUI::MenuBarHeight + (i * GUI::MyFactor) + ((i - 1) * GUI::One_Year_Div));
+					int yf = (GUI::MenuBarHeight + (i * GUI::MyFactor) + (i * GUI::One_Year_Div));
+
+					if (y > yi && y < yf) {
+						year = i;
+						// Get the semester
+						int s1 = yi + GUI::One_Semester_Div;
+						int s2 = yf - GUI::One_Semester_Div;
+
+						if (y > yi && y < s1) semester = FALL;
+						else if (y > s1 && y < s2) semester = SPRING;
+						else if (y > s2 && y < yf) semester = SUMMER;
+					}
+				}
+
+			}
+			else {
+				//The user clicked outside the region
+			}
+			if (year != NULL && pCInfo != nullptr) {
+				StudyPlan* pS = pReg->getStudyPlay();
+				string Title = pCInfo->Title;
+				int crd = pCInfo->Credits;
+				vector<Course_Code> PreReq = pCInfo->PreReqList;
+				vector<Course_Code> CoReq = pCInfo->CoReqList;
+				Course* pC = new Course(msg, Title, crd, PreReq, CoReq, year, semester);
+				pS->AddCourse(pC, year, static_cast<SEMESTER>(semester));
+				cout << msg << " is added to year " << year << " semester " << semester << endl;
+				pC->setYear(year);
+				pC->setSemester(semester);
+				pReg->UpdateInterface();
+				int iter = pC->numOfCoursesPerSem[(3 * (year - 1)) + semester] - 1;
+				gInfo.x = GUI::TitleBarWidth + (iter * CRS_WIDTH);
+				gInfo.y = GUI::MenuBarHeight + GUI::MyFactor + ((year - 1) * GUI::One_Year_Div) + (semester * GUI::One_Semester_Div) +
+					(GUI::MyFactor * (year - 1));
+				pC->setGfxInfo(gInfo);
+
+			}
+		}
+		count = count + 1;
+		MinorCourses[count]=pCInfo->Title;
+		if (counter > 1)
+		{
+			//delete courses in th MinorCourses Array
+			break;
+		}
+	}
+return true;
+}
+
+ActionDeclareMinor::~ActionDeclareMinor()
+{
+}
